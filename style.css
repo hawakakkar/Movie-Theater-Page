@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: #fcfbfbfa;
+}
+
+/* HEADER */
+
+header {
+  border: 3px solid #132443;
+  text-align: center;
+}
+
+.heading {
+  color: #132443;
+  padding: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  background: #132443;
+  padding: 15px;
+}
+
+nav ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #8095ff;
+}
+
+/* HERO */
+
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-image: url("./Moonlight.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.button0 {
+  background: white;
+  color: #132443;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* NOW SHOWING */
+heading3 {
+  color: #f8f9fb;
+}
+.heading3:hover {
+  transform: scale(1.05);
+  color: rgb(13, 55, 138);
+}
+.now-showing {
+  padding: 60px;
+  text-align: center;
+  background-color: #132443;
+  border: 3px solid #f6f7f9;
+  color: #ffffff;
+}
+
+.movie-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(8, 8, 8, 0.1);
+  transition: 0.3s;
+  background-color: #f8f9fb;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card h3 {
+  font-size: 20px;
+  text-align: center;
+  color: #132443;
+}
+.movie-card p {
+  font-size: 14px;
+  text-align: center;
+  color: #132443;
+}
+
+/* IMAGE FIX (IMPORTANT PART) */
+
+.image-box {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* BUTTON */
+
+.btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #081b5d;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  background: #0d068c;
+}
+
+/* ABOUT */
+.heading0 {
+  background-color: #132443;
+  color: #ffffff;
+}
+.heading0:hover {
+  transform: scale(1.05);
+  color: rgb(13, 55, 138);
+}
+
+.about {
+  padding: 50px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 3px solid #132443;
+  height: 40vh;
+  margin: 5px;
+  line-height: 2;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #132443;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-links a {
+  color: rgb(69, 108, 187);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: rgb(204, 32, 43);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* ===== Responsive Design ===== */
+
+  /* Below 768px */
+
+  @media (max-width: 768px) {
+    /* Navigation stacked */
+
+    nav {
+      flex-direction: column;
+
+      text-align: center;
+    }
+
+    nav ul {
+      flex-direction: column;
+
+      gap: 10px;
+    }
+
+    /* Movie cards 1–2 columns */
+
+    .movie-cards {
+      flex-direction: column;
+
+      align-items: center;
+    }
+
+    /* Hero text smaller */
+
+    .hero h1 {
+      font-size: 32px;
+    }
+
+    .hero p {
+      font-size: 14px;
+    }
+
+    .hero-content {
+      padding: 20px;
+    }
+  }
+
+  /* Below 480px */
+
+  @media (max-width: 480px) {
+    .movie-card {
+      width: 90%;
+    }
+
+    nav {
+      padding: 10px;
+    }
+  }
+}
